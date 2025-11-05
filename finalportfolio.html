@@ -1,0 +1,768 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional journalism portfolio showcasing narrative writing, magazine reporting, and multimedia storytelling">
+    <meta name="author" content="Daniela Anne Cantu">
+    <meta name="keywords" content="journalism, reporter, magazine journalism, data visualization, storytelling">
+    <title>Daniela Anne Cantu - Journalist & Visual Artist</title>
+    <style>
+        /* Reset and Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -Merriweather
+ sans-serif;
+            line-height: 1.7;
+            color: #2c2c2c;
+            background-color: #fff4e6;
+            font-size: 16px;
+        }
+
+        /* Typography */
+        h1 {
+        	font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+            color: #4b3832;
+            text-align: center;
+        }
+
+        h2 {
+        	font-family: 'Playfair Display', serif;
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+            font-weight: 300;
+            margin-bottom: 2rem;
+            color: #854442;
+            letter-spacing: -0.01em;
+            text-align: center;
+        }
+
+        h3 {
+        	font-family: 'Crimson Text', serif
+            font-size: clamp(1.25rem, 2vw, 1.5rem);
+            font-weight: 400;
+            margin-bottom: 0.75rem;
+            color: #3c2f2f;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #4a4a4a;
+        }
+
+        a {
+            color: #2c2c2c;
+            text-decoration: underline;
+            text-decoration-color: rgba(44, 44, 44, 0.3);
+            text-underline-offset: 3px;
+            transition: all 0.2s ease;
+        }
+
+        a:hover, a:focus {
+            text-decoration-color: #2c2c2c;
+            outline: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .wide-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            padding: 4rem 0 2rem;
+            text-align: center;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .header-content h1 {
+            margin-bottom: 1rem;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #666;
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+
+        /* Navigation */
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #666;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover, nav a:focus {
+            color: #2c2c2c;
+        }
+
+        /* Main Content */
+        main {
+            padding: 4rem 0;
+        }
+
+        section {
+            margin-bottom: 5rem;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-text {
+            font-size: 1.15rem;
+            line-height: 1.8;
+        }
+
+        .about-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .headshot-container {
+            position: sticky;
+            top: 2rem;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .headshot {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+            border-radius: 2px;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .headshot:hover {
+            filter: grayscale(0%);
+        }
+
+        /* Image and Caption Centering Styles */
+        figure {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        figure img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+
+        figcaption {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+            margin-top: 0.75rem;
+            text-align: center;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Work Section */
+        .work-item {
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .work-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .work-title {
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+
+        .work-title a {
+            text-decoration: none;
+            color: #1a1a1a;
+        }
+
+        .work-title a:hover, .work-title a:focus {
+            text-decoration: underline;
+            text-decoration-color: rgba(26, 26, 26, 0.4);
+        }
+
+        .work-deck {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .work-meta {
+            font-size: 0.95rem;
+            color: #888;
+            margin-bottom: 1rem;
+        }
+
+        .work-meta span {
+            margin-right: 1.5rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .tag {
+            font-size: 0.85rem;
+            color: #666;
+            background: #f8f8f8;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            letter-spacing: 0.3px;
+        }
+
+        /* Projects Section */
+        .project-item {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .project-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-title a {
+            text-decoration: none;
+            color: #1a1a1a;
+        }
+
+        .project-title a:hover, .project-title a:focus {
+            text-decoration: underline;
+            text-decoration-color: rgba(26, 26, 26, 0.4);
+        }
+
+        .project-description {
+            font-size: 1.05rem;
+            color: #555;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Resume Section */
+        .resume-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .resume-download {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #2c2c2c;
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            margin-bottom: 2rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .resume-download-container {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .resume-download:hover, .resume-download:focus {
+            background: #1a1a1a;
+            color: white;
+        }
+
+        .skills-category {
+            margin-bottom: 2.5rem;
+        }
+
+        .skills-category:last-child {
+            margin-bottom: 0;
+        }
+
+        .skills-category h3 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            color: #2c2c2c;
+        }
+
+        .skills-list {
+            list-style: none;
+        }
+
+        .skills-list li {
+            padding: 0.4rem 0;
+            color: #555;
+            font-size: 1rem;
+        }
+
+        .skills-list li:before {
+            content: "—";
+            color: #ccc;
+            margin-right: 0.75rem;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contact-item {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-item h3 {
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            color: #2c2c2c;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-item a {
+            font-size: 1.1rem;
+            color: #2c2c2c;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover, .contact-item a:focus {
+            text-decoration: underline;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: #666;
+            font-size: 1rem;
+            text-decoration: none;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            transition: color 0.2s ease;
+        }
+
+        .social-links a:hover, .social-links a:focus {
+            color: #2c2c2c;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid #e8e8e8;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-content p {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .ai-disclosure {
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #999;
+            margin-top: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container, .wide-container {
+                padding: 0 1.5rem;
+            }
+
+            header {
+                padding: 3rem 0 1.5rem;
+            }
+
+            nav ul {
+                gap: 1.5rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .headshot-container {
+                position: static;
+                max-width: 300px;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            .resume-content {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .work-meta span {
+                display: block;
+                margin-right: 0;
+                margin-bottom: 0.25rem;
+            }
+
+            section {
+                margin-bottom: 3.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container, .wide-container {
+                padding: 0 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .tags {
+                gap: 0.5rem;
+            }
+
+            .social-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        /* Focus styles */
+        *:focus {
+            outline: 2px solid #2c2c2c;
+            outline-offset: 2px;
+        }
+
+        /* Skip link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: #2c2c2c;
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 1000;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Daniela Anne Cantu</h1>
+                <p class="tagline">Journalist & Visual Artist</p>
+                <nav>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#work">Work</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#resume">Resume</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <section id="about">
+            <div class="container">
+                <h2>About</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I'm a graduate student at Northwestern University's Medill School of Journalism, where I concentrate in Magazine writing. Due to my passion for filmmaking and fine art, I find myself drawn to the curation of opinion pieces about new and retrospective film and Chicagoland entertainment journalism..</p>
+                        
+                        <p>Before journalism school, I studied under Emerson College & Paris College of Art's co-degree Global Bachelor of Fine Arts in Film Art program, which gave me a variety of production related skills and a deep appreciation for cinematic art. Coming from a small town in rural Texas, I have an appreciation for highlighting the artistic happenings of filmmakers with small budgets/limited production resources.</p>
+                        
+                        <p>I'm drawn to discussions around genre film, as I feel that this category of cinema can draw out some of the unrest harboring in today's society.</p>
+                    </div>
+                    <div class="headshot-container">
+                        <img src="https://lh3.googleusercontent.com/pw/AP1GczMLdrnYmbkDO4G6K2nMlLYYeQOkBWaF6qXEwUMD2tLWf0j2uJZYQIEZfbiPiowfkglj_XCJQGweoM7zZUcb2jZaI5ASp6UYt2br9oF_B6rCfPUNVImDK304tg8FgHADQxF7dLczhntZgC6c2vJteKlzSA=w1600-h1066-s-no-gm?authuser=0" alt="Daniela Anne Cantu giving a talkback after the premiere of her film 'Kansas City' class="headshot" width="400"> 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="work">
+            <div class="container">
+                <h2>Selected Work</h2>
+                
+                <article class="work-item">
+                    <h3 class="work-title"><a href="https://www.instagram.com/p/C38Od1YpOO8/?img_index=1" target="_blank" rel="noopener">Leap Day (Issue #2)</a></h3>
+                    <div style="display: flex; gap: 1rem; margin: 1rem 0; flex-wrap: wrap;">
+    <img src="https://i.imgur.com/L93KeYu.jpeg" alt="Out of the Mist Zine Interior Page 1" width="200" style="border-radius: 4px;">
+    <img src="https://i.imgur.com/419WWBC.jpeg" alt="Out of the Mist Zine Interior Page 2" width="200" style="border-radius: 4px;">
+</div>
+                    <p class="work-deck">Analog photography accompanied by Sparky Shelton’s poem A Leap Day Love Song.</p>
+                    <div class="work-meta">
+                        <span><strong>Role:</strong> Photojournalist, Analog Photographer</span>
+                        <span><strong>Outlet:</strong> Specific Northwest Zine</span>
+                        <span><strong>Date:</strong> March 2024</span>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Photography</span>
+                        <span class="tag">Analog Photography</span>
+                        <span class="tag">Photojournalism</span>
+                    </div>
+                </article>
+                <article class="work-item">
+                    <h3 class="work-title"><a href="https://www.instagram.com/p/C0PTwFopGE1/?img_index=2" target="_blank" rel="noopener">Out of the Mist (Issue #1)</a></h3>
+                    <img src="https://i.imgur.com/VVNKRSd.jpeg" alt="Out of the Mist Zine Cover" width="200">
+                    <p class="work-deck">Analog photography accompanied by Hayes Cooper’s poem Turtle.</p>
+                    <div class="work-meta">
+                        <span><strong>Role:</strong> Photojournalist, Analog Photographer</span>
+                        <span><strong>Outlet:</strong> Specific Northwest Zine</span>
+                        <span><strong>Date:</strong> December 2023</span>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Photography</span>
+                        <span class="tag">Analog Photography</span>
+                        <span class="tag">Photojournalism</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2>Film & Visual Projects</h2>
+                
+                <article class="project-item">
+                    <h3 class="project-title"><a href="#" target="_blank" rel="noopener">Kansas City (Short Film) (2025)</a></h3>
+                    <p class="project-description">The film followws Parker and Bianca, two young adults, experience the unraveling of their relationship as Parker develops a deluded sexual obsession with erotic online personality Kansas Fox. As his obsession deepens, he believes she is digitally following him wherever he goes and communicating with him by any means possible. I directed and wrote the film. Kansas City was screened at Emerson College's Paramount Theatre, currently in festival circulation.</p>
+                    <img src="https://i.imgur.com/20g8cHT.png" alt="Kansas City Poster" width="200" style="border-radius: 4px; cursor: pointer; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+                    <p style="text-align: center; font-size: 0.9rem; color: #666; margin-top: 0.5rem;"></p>
+                    <div class="tags">
+                        <span class="tag">Director</span>
+                        <span class="tag">Narrative Film</span>
+                        <span class="tag">Festival Circuit</span>
+                    </div>
+                </article>
+
+                <article class="project-item">
+                    <h3 class="project-title"><a href="#" target="_blank" rel="noopener">Dani, Auntie, Annigoni (Documentary) (2024)</a></h3>
+                    <p class="project-description">Documentary filmed in Well, Netherlands for a Documentary course at Emerson College's Kasteel Well. The documentary follows my figurative journey of learning about generational othering through art through portraits by Pietro Annigoni and my relationship with my aunt. I served as director and starred in the film.</p>
+                        <div style="text-align: center; margin: 1.5rem 0;">
+        <a href="https://www.youtube.com/watch?v=TFqSsTHBYoM" target="_blank" rel="noopener" style="text-decoration: none;">
+            <img src="https://i.imgur.com/Df7oSwr.jpeg" alt="Dani, Auntie Annigoni Documentary" width="400" style="border-radius: 4px; cursor: pointer; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+            <p style="text-align: center; font-size: 0.9rem; color: #666; margin-top: 0.5rem;">▶ Watch Documentary</p>
+        </a>
+    </div>
+    
+    <div class="tags">
+        <span class="tag">Director</span>
+        <span class="tag">Narrative Film</span>
+        <span class="tag">Festival Circuit</span>
+    </div>
+</article>
+
+                   <article class="project-item">
+                    <h3 class="project-title"><a href="#" target="_blank" rel="noopener">Hawktooth (Short Film) (2024)</a></h3>
+                    <p class="project-description">The film follows a couple arriving at an AirBnb for a vacation, and navigate through a complete metamorphosis of their relationship and each other as one of them begins to turn into a humanoid bird monster. I co-directed (with Elijah Stammler), wrote, edited and starred in the film.</p>
+                        <div style="text-align: center; margin: 1.5rem 0;">
+        <a href="https://vimeo.com/940768557?fl=pl&fe=sh" target="_blank" rel="noopener" style="text-decoration: none;">
+            <img src="https://i.imgur.com/U5SrELS.jpeg" alt="Hawktooth Film" width="400" style="border-radius: 4px; cursor: pointer; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+            <p style="text-align: center; font-size: 0.9rem; color: #666; margin-top: 0.5rem;">▶ Watch Film</p>
+        </a> 
+    </div>
+    
+    <div class="tags">
+                        <span class="tag">Director</span>
+                        <span class="tag">Narrative Film</span>
+                        <span class="tag">Visual Storytelling</span>
+                    </div>
+                </article>
+
+                    <article class="project-item">
+                    <h3 class="project-title"><a href="#" target="_blank" rel="noopener">+33 07 DATE ME PLS (Short Film) (2022)</a></h3>
+                    <p class="project-description">The film follows a small film crew that conducts a survey on sex, dating apps, and loneliness in a modern world. The film premiered at the Student World Impact Film Festival, and won an award for "BEST CAST" at AltFF Alternative Film Festival. I directed, edited and starred in the film.</p>
+                        <div style="text-align: center; margin: 1.5rem 0;">
+        <a href="https://www.youtube.com/watch?v=XkDSCmncqVA" target="_blank" rel="noopener" style="text-decoration: none;">
+            <img src="https://i.imgur.com/INVSb5H.jpeg" alt="+33 07 DATE ME PLS Film" width="200" style="border-radius: 4px; cursor: pointer; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+            <p style="text-align: center; font-size: 0.9rem; color: #666; margin-top: 0.5rem;">▶ Watch Film</p>
+        </a>
+    </div>
+                    <div class="tags">
+                        <span class="tag">Director</span>
+                        <span class="tag">Mockumentary</span>
+                        <span class="tag">Festival Circuit</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+         <section id="resume">
+            <div class="wide-container">
+                <h2>Resume & Skills</h2>
+                <div class="resume-content">
+                    <div>
+                        <div class="resume-download-container">                    
+                            <a href="https://drive.google.com/uc?export=download&id=1-Ip9A7je8X8Rp6QAX2QD6vFDTtotzAmw" class="resume-download" target="_blank" rel="noopener">Download Resume (PDF)</a>
+                        </div>
+                        
+                        <div class="skills-category">
+                            <h3>Reporting</h3>
+                            <ul class="skills-list">
+                                <li>Reporting methods</li>
+                                <li>Interactive journalism</li>
+                                <li>Magazine, Story and Narrative writing</li>
+                            </ul>
+                        </div>
+
+                        <div class="skills-category">
+                            <h3>Digital</h3>
+                            <ul class="skills-list">
+                                <li>Social media strategy</li>
+                                <li>Analog phototgraphy and Black Magic Digital Videography</li>
+                                <li>Short & Long-form video production</li>
+                            </ul>
+                        </div>
+                    
+                        <div class="skills-category">
+                            <h3>Technical</h3>
+                            <ul class="skills-list">
+                                <li>Adobe Suite (Photoshop, Premiere Pro, After Effects, Lightroom)</li>
+                                <li>Microsoft Office</li>
+                                <li>Google Suite</li>
+                                <li>DaVinci Resolve Studio</li>
+                                <li>Avid Pro Tools</li>
+                            </ul>
+                        </div>
+
+                        <div class="skills-category">
+                            <h3>Writing & Editing</h3>
+                            <ul class="skills-list">
+                                <li>AP Style</li>
+                                <li>Copy editing and proofreading</li>
+                                <li>Longform narrative writing</li>
+                                <li>Article, transcript, script and book coverage</li>
+                                <li>Caption review</li>
+                                <li>Contact location using social media</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Contact</h2>
+                <div class="contact-content">
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <a href="mailto:danielacantu2026@u.northwestern.edu">danielacantu2026@u.northwestern.edu</a>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>Phone</h3>
+                        <a href="tel:+16823045255">(682) 304-5255</a>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>Connect</h3>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/danielaannecantu/" target="_blank" rel="noopener">Professional Instagram</a>
+                            <a href="https://www.linkedin.com/in/danielacannot/" target="_blank" rel="noopener">LinkedIn</a>
+                            <a href="https://www.danielaannecantu.com/" target="_blank" rel="noopener">Film Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Daniela Anne Cantu</p>
+                <p>Last updated September 2025</p>
+                <p class="ai-disclosure">This page was built by me. I used generative AI for initial template structure and placeholder content; all content was reviewed and edited by me.</p>
+                <a href="https://claude.ai/share/89b681f7-dc01-4c84-8d24-2724bfa40ca9/" target="_blank" rel="noopener">AI Prompt Log</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
